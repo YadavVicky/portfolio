@@ -1,0 +1,6 @@
+.header {
+    position: relative;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}

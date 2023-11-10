@@ -1,0 +1,221 @@
+.aezakmiaa {
+    background: #e6e9ff;
+    height: auto;
+    max-width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 50px #abb7e9;
+    cursor: pointer;
+}
+
+.myProgress-100 {
+    animation: myProgress-100 2s ease-in;
+}
+
+@keyframes myProgress-100 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.myProgress-95 {
+    animation: myProgress-95 2s ease-in;
+}
+
+@keyframes myProgress-95 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+.myProgress-90 {
+    animation: myProgress-90 2s ease-in;
+}
+
+@keyframes myProgress-90 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+.myProgress-85 {
+    animation: myProgress-85 2s ease-in;
+}
+
+@keyframes myProgress-85 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+.myProgress-80 {
+    animation: myProgress-80 2s ease-in;
+}
+
+@keyframes myProgress-80 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+.myProgress-75 {
+    animation: myProgress-75 2s ease-in;
+}
+
+@keyframes myProgress-75 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+.myProgress-70 {
+    animation: myProgress-70 2s ease-in;
+}
+
+@keyframes myProgress-70 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+.myProgress-65 {
+    animation: myProgress-65 2s ease-in;
+}
+
+@keyframes myProgress-65 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
+.myProgress-60 {
+    animation: myProgress-60 2s ease-in;
+}
+
+@keyframes myProgress-60 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+.myProgress-55 {
+    animation: myProgress-55 2s ease-in;
+}
+
+@keyframes myProgress-55 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 55%;
+    }
+}
+
+.myProgress-50 {
+    animation: myProgress-50 2s ease-in;
+}
+
+@keyframes myProgress-50 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+.myProgress-45 {
+    animation: myProgress-45 2s ease-in;
+}
+
+@keyframes myProgress-45 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 45%;
+    }
+}
+
+.myProgress-40 {
+    animation: myProgress-40 2s ease-in;
+}
+
+@keyframes myProgress-40 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 40%;
+    }
+}
+
+.myProgress-35 {
+    animation: myProgress-35 2s ease-in;
+}
+
+@keyframes myProgress-35 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 35%;
+    }
+}
+
+.myProgress-30 {
+    animation: myProgress-30 2s ease-in;
+}
+
+@keyframes myProgress-30 {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 30%;
+    }
+}
+

@@ -1,0 +1,12 @@
+.myImage {
+    width: 100%;
+    height: 60vh;
+    opacity: .9;
+    background-size: cover;
+    position: relative;
+}
+
+.myRow {
+    background: linear-gradient(109.6deg, rgb(43, 1, 91) 13.4%, rgb(122, 2, 54) 100.2%);
+    height: 100vh;
+}

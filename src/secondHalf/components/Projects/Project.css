@@ -1,0 +1,136 @@
+.card1 {
+    position: relative;
+    height: 440px;
+    box-shadow: 0px 0px 20px 1px #000c;
+    overflow: hidden;
+    border: none;
+}
+
+.card1:hover .card-body1 {
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+}
+
+.card-head1 {
+    height: 450px;
+    margin: 0px 0px;
+    border: 0px solid red;
+    background: url(https://res.cloudinary.com/dkrtupzet/image/upload/v1698162819/Sage_Glod_Brush_Stroke_Watercolor_A4_Blank_Page_Border_sc3vpu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.4s linear;
+}
+
+.wrapper-project-loader {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card-body1 {
+    display: none;
+    color: whitesmoke;
+}
+
+.card-body1 .btn-warning {
+    position: absolute;
+    bottom: -70px;
+}
+
+.card1:hover .card-body1 .btn-warning {
+    position: relative;
+    bottom: 0px;
+}
+
+.card1:hover::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+}
+
+.card1:hover .card-body1,
+.card1:hover .card-text1 {
+    opacity: 1;
+    display: block;
+}
+
+.card1:hover .card-head1 {
+    margin: 0;
+    border: none;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    transform: scale(2);
+}
+
+.wrapper-project{
+    max-width: 1080px;
+    margin: 1% 0;
+    padding: 0 20px;
+    overflow-y: scroll;
+    height: 80vh;
+    scroll-behavior: smooth;
+    position: relative;
+    background-color: #00000080;
+}
+
+.wrapper-project::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.wrapper-project::-webkit-scrollbar-thumb {
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: 4px solid transparent;
+    background-clip: content-box;
+    background-color: #7575b6;
+
+    &:hover {
+        background-color: #5757a6;
+    }
+}
+
+.wrapper-project::-webkit-scrollbar-track {
+    background-color: #91eae4;
+}
+
+/**Button Code**/
+
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  outline: 0;
+  padding: 5px 10px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}

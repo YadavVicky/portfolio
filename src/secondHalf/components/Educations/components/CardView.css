@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.accordion {
+  display: flex;
+  margin-block: 50px;
+  width: min(100% - 175px, 950px);
+}
+.accordion__item {
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  flex: 1;
+  transition: flex 250ms;
+  overflow: hidden;
+}
+.accordion__item:first-child {
+  border-radius: 20px 0 0 20px;
+}
+.accordion__item:last-child {
+  border-radius: 0 20px 20px 0;
+}
+.accordion .accordion__item:hover {
+  flex: 3;
+}
+.accordion__item:hover .accordion__overlay {
+  opacity: 1;
+  padding: 50px;
+}
+.accordion__image {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.accordion__overlay {
+  transition: opacity 250ms, padding 250ms;
+  position: absolute;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.64) 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+}
+.accordion__overlay h2 {
+  white-space: nowrap;
+}
+@media (max-width: 1234px) {
+  .accordion {
+    flex-direction: column;
+    max-height: 500px;
+  }
+  .accordion__item:first-child {
+    border-radius: 20px 20px 0 0;
+  }
+  .accordion__item:last-child {
+    border-radius: 0 0 20px 20px;
+  }
+  .accordion__image {
+    height: 100%;
+  }
+  .accordion__overlay {
+    justify-content: center;
+  }
+  .accordion__overlay h2 {
+    white-space: normal;
+    text-wrap: balance;
+    text-align: center;
+    margin-block-end: 25px;
+  }
+  .accordion__item:hover .accordion__overlay {
+    opacity: 1;
+    padding: 25px;
+  }
+}

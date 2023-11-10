@@ -1,0 +1,18 @@
+.card-Header-style {
+    background-color: #34282C;
+    color: wheat;
+}
+
+.card-section-style {
+    box-shadow: cyan 0 20px 20px -50px, cyan 0 20px 20px -30px, #000 0 20px 20px inset;
+    margin-bottom: 14px;
+}
+
+.card-body-style {
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+
+.myCard {
+    background-color: #010b13;
+    color: lightgoldenrodyellow;
+}
