@@ -18,6 +18,9 @@ let ContactMe = () => {
     const emailAddressChangeHandler = useCallback((id, value, isValid) => {
 
     }, []);
+    const roleOfferingChangeHandler = useCallback((id, value, isValid) => {
+
+    }, []);
     let GoToLinkedIn = () => {
         window.open('https://www.linkedin.com/in/vinay-kumar-yadav-14b87b192/', "_blank");
     }
@@ -36,9 +39,10 @@ let ContactMe = () => {
                 {!sent ? <><form className="form" onSubmit={ClearButton} style={{ paddingTop: "20px", paddingBottom: "20px" }}>
                     <InputField id="personName" label="Name" name="personName" validators={[VALIDATOR_REQUIRE()]} onInput={nameChangeHandler} errorMessage="Please Enter A Name" />
                     <InputField id="organisationName" label="Organisation" name="organisationName" validators={[VALIDATOR_REQUIRE()]} onInput={organisationNameChangeHandler} errorMessage="Please Enter A Organisation Name" />
+                    <InputField id="roleOffering" label="Role Offering" name="roleOffering" validators={[VALIDATOR_REQUIRE()]} onInput={roleOfferingChangeHandler} errorMessage="If you don't want to disclose. Fill 'n/a'." />
                     <InputField id="contactNumber" label="Contact Number" name="contactNumber" validators={[VALIDATOR_REQUIRE()]} onInput={contactNumberChangeHandler} errorMessage="Please Enter A Contact Number" />
                     <InputField id="emailAddress" label="Email Address" name="emailAddress" validators={[VALIDATOR_REQUIRE(), VALIDATOR_EMAIL()]} onInput={emailAddressChangeHandler} errorMessage="Please Enter Valid Email Address" />
-                    <button className="button-33" type="submit"> <i class="fa-solid fa-paper-plane"></i> Send</button>
+                    <button className="button-33    " type="submit"> <i class="fa-solid fa-paper-plane"></i> Send Me</button>
                 </form>
                     <button className="button-linked" onClick={GoToLinkedIn}> <i class="fa-brands fa-linkedin"></i> LinkedIn</button>
                     <button className="button-github" style={{marginLeft: "30px", marginBottom: "20px"}}onClick={GoToGitHub}> <i className="fa-brands fa-github fa-xl"></i> GitHub</button>

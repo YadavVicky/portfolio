@@ -50,6 +50,7 @@ let InputField = props => {
                 value={inputState.value}
                 name={props.name}
                 required={props.isRequired}
+                style={{color: "blanchedalmond"}}
             ></input>
             {!inputState.isValid && inputState.isTouched && <p className="text-danger">{props.errorMessage}</p>}
         </div>
