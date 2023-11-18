@@ -14,14 +14,14 @@ function App() {
   }
   if (size.width >= 1200) {
     return (
-      <div className="App row" style={{ margin: "0px" }}>
+      <div className="App row background" style={{ margin: "0px" }}>
         {<FirstHalf />}
         {<SecondHalf  collapse={false} />}
       </div>
     );
   } else {
     return (
-      <div className="App row" style={{ margin: "0px" }}>
+      <div className="App row background" style={{ margin: "0px" }}>
         <NavLinkCollapse onClickMe={onClickMe} hideSecondHalf={hideSecondHalf} />
         {!hideSecondHalf && <FirstHalf />}
         {hideSecondHalf && <SecondHalf  collapse={true} />}

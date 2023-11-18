@@ -1,25 +1,44 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useReducer } from "react";
 import InputField from "./Components/InputField";
 import Header from "../../../shared/UIElements/Header";
-import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL } from "../../../shared/validators";
+import { VALIDATOR_REQUIRE, VALIDATOR_EMAIL, VALIDATOR_MAXLENGTH, VALIDATOR_MINLENGTH, VALIDATOR_PHONENUMBER } from "../../../shared/validators";
 import './ContactMe.css';
 
+const INITIAL_NEW_PLACE_FORM = {
+    personName: {
+        value: '',
+        isValid: false,
+    },
+    organisationName: {
+        value: '',
+        isValid: false,
+    },
+    roleOffering: {
+        value: '',
+        isValid: false,
+    },
+    contactNumber: {
+        value: '',
+        isValid: false,
+    },
+    emailAddress: {
+        value: '',
+        isValid: false,
+    }
+}
 let ContactMe = () => {
     const [sent, setSent] = useState(false);
-    const nameChangeHandler = useCallback((id, value, isValid) => {
-
-    }, []);
-    const organisationNameChangeHandler = useCallback((id, value, isValid) => {
-
-    }, []);
-    const contactNumberChangeHandler = useCallback((id, value, isValid) => {
-
-    }, []);
-    const emailAddressChangeHandler = useCallback((id, value, isValid) => {
-
-    }, []);
-    const roleOfferingChangeHandler = useCallback((id, value, isValid) => {
-
+    const [formState, setFormState] = useState(INITIAL_NEW_PLACE_FORM);
+    const inputChangeHandler = useCallback((id, value, isValid) => {
+        setFormState(prevForm => {
+            return {
+                ...prevForm,
+                [id]: {
+                    value,
+                    isValid,
+                }
+            }
+        });
     }, []);
     let GoToLinkedIn = () => {
         window.open('https://www.linkedin.com/in/vinay-kumar-yadav-14b87b192/', "_blank");
@@ -37,20 +56,17 @@ let ContactMe = () => {
         <div className="wrapper-contact">
             <div class="panel">
                 {!sent ? <><form className="form" onSubmit={ClearButton} style={{ paddingTop: "20px", paddingBottom: "20px" }}>
-                    <InputField id="personName" label="Name" name="personName" validators={[VALIDATOR_REQUIRE()]} onInput={nameChangeHandler} errorMessage="Please Enter A Name" />
-                    <InputField id="organisationName" label="Organisation" name="organisationName" validators={[VALIDATOR_REQUIRE()]} onInput={organisationNameChangeHandler} errorMessage="Please Enter A Organisation Name" />
-                    <InputField id="roleOffering" label="Role Offering" name="roleOffering" validators={[VALIDATOR_REQUIRE()]} onInput={roleOfferingChangeHandler} errorMessage="If you don't want to disclose. Fill 'n/a'." />
-                    <InputField id="contactNumber" label="Contact Number" name="contactNumber" validators={[VALIDATOR_REQUIRE()]} onInput={contactNumberChangeHandler} errorMessage="Please Enter A Contact Number" />
-                    <InputField id="emailAddress" label="Email Address" name="emailAddress" validators={[VALIDATOR_REQUIRE(), VALIDATOR_EMAIL()]} onInput={emailAddressChangeHandler} errorMessage="Please Enter Valid Email Address" />
-                    <button className="button-33    " type="submit"> <i class="fa-solid fa-paper-plane"></i> Send Me</button>
+                    <InputField id="personName" label="Name" name="personName" type="text" validators={[VALIDATOR_REQUIRE()]} onInput={inputChangeHandler} errorMessage="Please Enter A Name" />
+                    <InputField id="organisationName" label="Organisation" type="text" name="organisationName" validators={[VALIDATOR_REQUIRE()]} onInput={inputChangeHandler} errorMessage="Please Enter A Organisation Name" />
+                    <InputField id="roleOffering" label="Role Offering" type="text" name="roleOffering" validators={[VALIDATOR_REQUIRE()]} onInput={inputChangeHandler} errorMessage="If you don't want to disclose. Fill 'n/a' ;)" />
+                    <InputField id="contactNumber" label="Contact Number" type="number" name="contactNumber" validators={[VALIDATOR_MINLENGTH(10),VALIDATOR_MAXLENGTH(10)]} onInput={inputChangeHandler} errorMessage="Please Enter A Contact Number" />
+                    <InputField id="emailAddress" label="Email Address" type="text" name="emailAddress" validators={[VALIDATOR_REQUIRE(), VALIDATOR_EMAIL()]} onInput={inputChangeHandler} errorMessage="Please Enter Valid Email Address" />
+                    <button className="button-33" type="submit"> <i class="fa-solid fa-paper-plane"></i> Send Me</button>
                 </form>
                     <button className="button-linked" onClick={GoToLinkedIn}> <i class="fa-brands fa-linkedin"></i> LinkedIn</button>
-                    <button className="button-github" style={{marginLeft: "30px", marginBottom: "20px"}}onClick={GoToGitHub}> <i className="fa-brands fa-github fa-xl"></i> GitHub</button>
-                    </> :
-                    <div className="form">
-                        <p>Your Request Has been sent. Please Wait Until I Call Back You, which will be soon. Feel free to take a look.</p>
-                    </div>
-                }
+                    <button className="button-github" style={{ marginLeft: "30px", marginBottom: "20px" }} onClick={GoToGitHub}> <i className="fa-brands fa-github fa-xl"></i> GitHub</button>
+                </>
+                    : <p>Request is send</p>}
             </div>
         </div>
     </>)

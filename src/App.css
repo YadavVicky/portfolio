@@ -26,3 +26,9 @@
 .button:hover {
     transform: translateY(-5px);
 }
+
+.background {
+    background-image: url(https://res.cloudinary.com/dkrtupzet/image/upload/v1667229212/alex-kotliarskyi-QBpZGqEMsKg-unsplash_a8cjaa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

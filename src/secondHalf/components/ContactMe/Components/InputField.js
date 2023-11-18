@@ -37,20 +37,19 @@ let InputField = props => {
     const { id, onInput } = props;
     const { value, isValid } = inputState;
     useEffect(() => {
-        props.onInput(id, value, isValid)
+        onInput(id, value, isValid)
     }, [id, value, isValid, onInput]);
     let element = (
         <div className="mt-2">
             <input
-                type="text"
+                type={props.type}
                 id={props.id}
                 placeholder={props.label}
                 onChange={changeHandler}
                 onBlur={touchHandler}
                 value={inputState.value}
-                name={props.name}
-                required={props.isRequired}
                 style={{color: "blanchedalmond"}}
+                maxLength="50"
             ></input>
             {!inputState.isValid && inputState.isTouched && <p className="text-danger">{props.errorMessage}</p>}
         </div>

@@ -7,7 +7,7 @@ const ProjectCards = props => {
             <div className="col-xl-6 text-center mt-5">
                 <div className="card1 m-auto" style={{ width: '20rem' }}>
                     <div className="card-head1"></div>
-                    <div className="card-body1 p-1">
+                    <div className="card-body1 p-1" style={{color: "black"}}>
                         <h5 className="card-title1">- {props.projectDetail.projectName} -</h5>
                         <p className="card-text1">{ props.projectDetail.projectDescription && props.projectDetail.projectDescription.substring(0,74) + '...'}</p>
                         <button type="button" className="btn btn-dark" data-bs-toggle="modal" data-bs-target={"#hexa"+props.id}>
