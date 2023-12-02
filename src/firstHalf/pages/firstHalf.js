@@ -12,7 +12,7 @@ const FirstHalf = () => {
         const sendReq = async () => {
             try{
             setLoaderValue(true);
-            const response = await fetch('http://localhost:5000/api/newUser/');
+            const response = await fetch('https://porfolioapi.onrender.com/api/newUser/');
             const responseData = await response.json();
             setUserData(responseData.user);
             setLoaderValue(false);

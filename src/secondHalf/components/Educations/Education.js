@@ -11,10 +11,9 @@ const Education = () => {
         const sendReq = async () => {
             try {
                 setLoaderValue(true);
-                const response = await fetch('http://localhost:5000/api/education/');
+                const response = await fetch('https://porfolioapi.onrender.com/api/education/');
                 const responseData = await response.json();
                 setUserEducation(responseData.educationList);
-                console.log(userEducation);
                 setLoaderValue(false);
             } catch (e) {
                 console.log('Error');

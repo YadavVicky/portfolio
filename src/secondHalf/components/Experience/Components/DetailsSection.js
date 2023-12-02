@@ -23,7 +23,7 @@ const Details = props => {
                     </h2>
                     <div id={"panelsStayOpen-collapseOne" + props.id} className="accordion-collapse collapse">
                         <div className="accordion-body">
-                            <DetailsList experienceYear={experience_years} companyName={props.projectDetail.companyName} description={desc_array} />
+                            <DetailsList key={experience_years} experienceYear={experience_years} companyName={props.projectDetail.companyName} description={desc_array} />
                         </div>
                     </div>
                 </div>

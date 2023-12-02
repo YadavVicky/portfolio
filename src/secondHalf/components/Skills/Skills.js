@@ -12,7 +12,7 @@ const Skills = () => {
     const sendReq = async () => {
       try {
         setLoaderValue(true);
-        const response = await fetch('http://localhost:5000/api/skills/');
+        const response = await fetch('https://porfolioapi.onrender.com/api/skills/');
         const responseData = await response.json();
         setUserSkills(responseData.allSkills);
         setLoaderValue(false);

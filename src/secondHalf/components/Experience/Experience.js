@@ -10,7 +10,7 @@ const Experience = () => {
         const sendReq = async () => {
             try {
                 setLoaderValue(true);
-                const response = await fetch('http://localhost:5000/api/experience/');
+                const response = await fetch('https://porfolioapi.onrender.com/api/experience/');
                 const responseData = await response.json();
                 setUserExperience(responseData.experienceList);
                 setLoaderValue(false);
