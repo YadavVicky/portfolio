@@ -1,19 +1,12 @@
 import React from 'react';
 import SideNavbar from '../components/SideNavbar';
 import { Route, Routes } from 'react-router-dom';
+import Education from '../components/Educations/Education';
+import Skills from '../components/Skills/Skills';
+import Experience from '../components/Experience/Experience';
+import Project from '../components/Projects/Project';
+import ContactMe from '../components/ContactMe/ContactMe';
 import './secondHalf.css';
-//import Education from '../components/Educations/Education';
-//import Skills from '../components/Skills/Skills';
-//import Experience from '../components/Experience/Experience';
-//import Project from '../components/Projects/Project';
-//import ContactMe from '../components/ContactMe/ContactMe';
-
-const Education = React.lazy(()=> import('../components/Educations/Education'));
-const Skills = React.lazy(()=> import('../components/Skills/Skills'));
-const Experience = React.lazy(()=> import('../components/Experience/Experience'));
-const Project = React.lazy(()=> import('../components/Projects/Project'));
-const ContactMe = React.lazy(()=> import('../components/ContactMe/ContactMe'));
-
 const SecondHalf = props => {
     return (
         <div className='col-xl-9' style={{ display: "flex", flexDirection: "row-reverse" }}>
