@@ -47,15 +47,33 @@ let ContactMe = () => {
     let GoToGitHub = () => {
         window.open('https://github.com/YadavVicky/', "_blank");
     }
-    const ClearButton = event => {
+    const ClearButton = async event => {
         event.preventDefault();
         //sending req done;
-        for (const prop in formState) {
-            console.log(formState[prop]);
+        for(const prop in formState) {
             if (!formState[prop].isValid) {
                 setFormValid(true);
                 return;
             }
+        }
+        try{
+        const response = await fetch('https://porfolioapi.onrender.com/api/contactMe/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                personName: formState.personName.value,
+                organisationName: formState.organisationName.value,
+                roleOffering: formState.roleOffering.value,
+                contactNumber: formState.contactNumber.value,
+                emailAddress: formState.emailAddress.value
+            })
+        });
+        const responseData = await response.json();
+        console.log(responseData);
+        }catch(e){
+            console.log(e);
         }
         setSent(true);
     }

@@ -29,6 +29,9 @@ const Experience = () => {
                 {userExperience && userExperience.map((element, i) => {
                     return <Details key={i} projectDetail={element} id={i} />
                 })}
+                {!userExperience && userExperience.map((element, i) => {
+                    return <p>No Data Found</p>
+                })}
             </div>
         </>
     );
