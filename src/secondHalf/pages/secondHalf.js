@@ -1,6 +1,7 @@
 import React from 'react';
 import SideNavbar from '../components/SideNavbar';
 import { Route, Routes } from 'react-router-dom';
+import './secondHalf.css';
 //import Education from '../components/Educations/Education';
 //import Skills from '../components/Skills/Skills';
 //import Experience from '../components/Experience/Experience';
@@ -13,7 +14,6 @@ const Experience = React.lazy(()=> import('../components/Experience/Experience')
 const Project = React.lazy(()=> import('../components/Projects/Project'));
 const ContactMe = React.lazy(()=> import('../components/ContactMe/ContactMe'));
 
-import './secondHalf.css';
 const SecondHalf = props => {
     return (
         <div className='col-xl-9' style={{ display: "flex", flexDirection: "row-reverse" }}>
