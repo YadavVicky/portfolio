@@ -11,7 +11,7 @@ const Education = () => {
         const sendReq = async () => {
             try {
                 setLoaderValue(true);
-                const response = await fetch('https://porfolioapi.onrender.com/api/education/');
+                const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/education/');
                 const responseData = await response.json();
                 setUserEducation(responseData.educationList);
                 setLoaderValue(false);

@@ -57,7 +57,7 @@ let ContactMe = () => {
             }
         }
         try{
-        const response = await fetch('https://porfolioapi.onrender.com/api/contactMe/', {
+        const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/contactMe/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

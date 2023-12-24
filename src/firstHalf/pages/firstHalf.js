@@ -12,7 +12,7 @@ const FirstHalf = () => {
         const sendReq = async () => {
             try{
             setLoaderValue(true);
-            const response = await fetch('https://porfolioapi.onrender.com/api/newUser/');
+            const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/newUser/');
             const responseData = await response.json();
             setUserData(responseData.user);
             setLoaderValue(false);

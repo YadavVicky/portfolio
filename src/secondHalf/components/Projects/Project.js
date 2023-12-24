@@ -11,7 +11,7 @@ const Project = () => {
         const sendReq = async () => {
             try {
                 setLoaderValue(true);
-                const response = await fetch('https://porfolioapi.onrender.com/api/project/');
+                const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/project/');
                 const responseData = await response.json();
                 setUserProject(responseData.projectList);
                 setLoaderValue(false);
