@@ -5,15 +5,15 @@ import Details from "./Components/DetailsSection";
 
 const Experience = () => {
     var [userExperience, setUserExperience] = useState(null);
-    var [loaderValue, setLoaderValue] = useState(false);
+    //var [loaderValue, setLoaderValue] = useState(false);
     useEffect(() => {
         const sendReq = async () => {
             try {
-                setLoaderValue(true);
+                //setLoaderValue(true);
                 const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/experience/');
                 const responseData = await response.json();
                 setUserExperience(responseData.experienceList);
-                setLoaderValue(false);
+               //setLoaderValue(false);
             } catch (e) {
                 console.log('Error');
             }
@@ -21,7 +21,7 @@ const Experience = () => {
         if (!userExperience) {
             sendReq();
         }
-    }, []);
+    }, [userExperience]);
     return (
         <>
             <Header heading="Experience" />
