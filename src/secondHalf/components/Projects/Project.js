@@ -6,27 +6,29 @@ import { ThreeDots } from "react-loader-spinner";
 
 const Project = () => {
     var [userProject, setUserProject] = useState(null);
-    var [loaderValue, setLoaderValue] = useState(false);
     useEffect(() => {
+        if(sessionStorage.getItem("project")){
+            let items = sessionStorage.getItem("project");
+            setUserProject(JSON.parse(items));
+        }
         const sendReq = async () => {
             try {
-                setLoaderValue(true);
                 const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/project/');
                 const responseData = await response.json();
                 setUserProject(responseData.projectList);
-                setLoaderValue(false);
+                sessionStorage.setItem("project", JSON.stringify(responseData.projectList));
             } catch (e) {
                 console.log('Error');
             }
         }
-        if (!userProject) {
+        if(userProject === null || userProject.length === 0) {
             sendReq();
         }
     }, []);
     return (
         <>
             <Header heading="Projects" />
-            {loaderValue ? (
+            {!userProject ? (
                 <div className="wrapper1">
                     <div className="wrapper-project-loader">
                         <ThreeDots color="white" width={"20%"} />

@@ -8,21 +8,23 @@ const Education = () => {
     var [userEducation, setUserEducation] = useState(null);
     var [loaderValue, setLoaderValue] = useState(false);
     useEffect(() => {
+        if(sessionStorage.getItem("education")){
+            let items = sessionStorage.getItem("education");
+            setUserEducation(JSON.parse(items));
+        }
         const sendReq = async () => {
             try {
                 setLoaderValue(true);
                 const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/education/');
                 const responseData = await response.json();
                 setUserEducation(responseData.educationList);
+                sessionStorage.setItem("education", JSON.stringify(responseData.educationList));
                 setLoaderValue(false);
             } catch (e) {
                 console.log('Error');
             }
         }
         if (!userEducation) {
-            sendReq();
-        }
-        if (!myData) {
             sendReq();
         }
     }, []);

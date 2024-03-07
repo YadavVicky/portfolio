@@ -7,15 +7,17 @@ import { ThreeDots } from "react-loader-spinner";
 
 const FirstHalf = () => {
     var [userData, setUserData] = useState(null);
-    var [loaderValue, setLoaderValue] = useState(false);
     useEffect(() => {
+        if(sessionStorage.getItem("details")){
+            let items = sessionStorage.getItem("details");
+            setUserData(JSON.parse(items));
+          }
         const sendReq = async () => {
             try{
-            setLoaderValue(true);
             const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/newUser/');
             const responseData = await response.json();
             setUserData(responseData.user);
-            setLoaderValue(false);
+            sessionStorage.setItem("details", JSON.stringify(responseData.user));
             }catch(e){
                 console.log('Error');
             }
@@ -30,7 +32,7 @@ const FirstHalf = () => {
     }
     return (
         <>
-            {loaderValue ? (
+            {!userData ? (
                 <div className='col-xl-3 shadow-lg rounded myRow' style={{ boxShadow: "0 0 10px #ffffff" }} >
                     <div className='row' style={{ marginTop: "75%", paddingLeft: "35%" }}>
                         <ThreeDots color="white" width={"20%"} />
