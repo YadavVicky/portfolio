@@ -26,11 +26,11 @@ const SideNavbar = props => {
                     <i className="fa-sharp fa-solid fa-star" style={{color: "#ffffff"}}></i>
                     </button>
                 </NavLink>
-                <NavLink end to="/contactme">
+                {/* <NavLink end to="/contactme">
                     <button className="nav-link mb-3" data-toggle="tooltip" title="Contact Me">
                     <i className="fa-solid fa-address-book" style={{color: "#ffffff"}}></i>
                     </button>
-                </NavLink>
+                </NavLink> */}
             </nav>
         </>
     }

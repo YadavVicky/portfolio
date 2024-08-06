@@ -17,7 +17,7 @@ const SecondHalf = props => {
                     <Route path='experience' element={<Experience />}></Route>
                     <Route path='projects' element={<Project />}></Route>
                     <Route path='skills' element={<Skills />}></Route>
-                    <Route path='contactme' element={<ContactMe />}></Route>
+                    {/* <Route path='contactme' element={<ContactMe />}></Route> */}
                     <Route path='*' element={<Education />}></Route>
                 </Routes>
             </div>

@@ -7,6 +7,7 @@ const Education = () => {
     var myData = null;
     var [userEducation, setUserEducation] = useState(null);
     var [loaderValue, setLoaderValue] = useState(false);
+    /*
     useEffect(() => {
         if(sessionStorage.getItem("education")){
             let items = sessionStorage.getItem("education");
@@ -28,6 +29,39 @@ const Education = () => {
             sendReq();
         }
     }, []);
+    */
+    userEducation = [
+        {
+            "isDegree": true,
+            "degreeName": "B. Tech",
+            "school": "Dr. APJ Abdul Kalam Technical University",
+            "board": "",
+            "isCPGA": true,
+            "marks": "8.07",
+            "major": "Computer Science & Engineering",
+            "year": "2017-2021"
+          },
+          {
+            "isDegree": false,
+            "degreeName": "Intermediate",
+            "school": "Arihant Public School",
+            "board": "CBSE",
+            "isCPGA": false,
+            "marks": "67",
+            "major": "Science",
+            "year": "2016-2017"
+          },
+          {
+            "isDegree": false,
+            "degreeName": "High School",
+            "school": "St Xavier's High School",
+            "board": "CBSE",
+            "isCPGA": false,
+            "marks": "77.8",
+            "major": "Science",
+            "year": "2014-2015"
+          }
+    ];
     return (
         <>
             <Header heading="Education" />

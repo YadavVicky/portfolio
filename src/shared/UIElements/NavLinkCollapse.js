@@ -27,11 +27,11 @@ const NavLinkCollapse = props => {
                         <i className="fa-sharp fa-solid fa-star" style={{ color: "#ffffff" }}></i>
                     </button>
                 </NavLink>
-                <NavLink end to="/contactme">
+                {/* <NavLink end to="/contactme">
                     <button className="button">
                     <i className="fa-solid fa-address-book" style={{color: "#ffffff"}}></i>
                     </button>
-                </NavLink>
+                </NavLink> */}
                 <button className="button" onClick={props.onClickMe}>
                     <i className="fa-solid fa-user"></i>
                 </button>

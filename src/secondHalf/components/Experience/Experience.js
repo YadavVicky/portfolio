@@ -5,11 +5,13 @@ import Details from "./Components/DetailsSection";
 
 const Experience = () => {
     var [userExperience, setUserExperience] = useState(null);
+    /*
     useEffect(() => {
         if(sessionStorage.getItem("experience")){
             let items = sessionStorage.getItem("experience");
             setUserExperience(JSON.parse(items));
         }
+        
         const sendReq = async () => {
             try {
                 const response = await fetch('https://wide-eyed-elk-jersey.cyclic.app/api/experience/');
@@ -24,6 +26,25 @@ const Experience = () => {
             sendReq();
         }
     }, []);
+    */
+    userExperience = [
+        {
+            "companyName": "Tata Consultancy Services",
+            "designation": "Systems Engineer",
+            "startDate": "1658428200000",
+            "endDate": "",
+            "currentFlag": true,
+            "description": "Worked for Citi Group, developed the front end and middleware layer of the application.:Used HTML, CSS, JavaScript, and Angular. Also Tools like Git, Jira, BitBucket, RAD, ALM.:Secured a top 250 ranking at the TCS Top 10 Coders Competition.:I have achieved the T-factor of 4.16, which is in top 10%."
+          },
+        {
+            "companyName": "Tata Consultancy Services",
+            "designation": "Assistant Systems Engineer",
+            "startDate": "1626892200000",
+            "endDate": "1658428200000",
+            "currentFlag": false,
+            "description": "Worked for Citi Group, developed the front end and middleware layer of the application.:Used HTML, CSS, JavaScript, and Angular. Also Tools like Git, Jira, BitBucket, RAD, ALM."
+          }
+    ];
     return (
         <>
             <Header heading="Experience" />
