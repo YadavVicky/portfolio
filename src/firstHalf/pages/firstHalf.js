@@ -44,8 +44,8 @@ const FirstHalf = () => {
     phone: "9983316522",
     currentLocation: "Gurgaon",
     experience: "1626892200000",
-    position: "Systems Engineer",
-    currentCompany: "Tata Consultancy Services",
+    position: "Senior Software Engineer",
+    currentCompany: "Accenture",
   };
   return (
     <>

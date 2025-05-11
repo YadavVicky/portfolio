@@ -29,12 +29,20 @@ const Experience = () => {
     */
     userExperience = [
         {
+            "companyName": "Accenture",
+            "designation": "Senior Software Engineer",
+            "startDate": "1732818600000",
+            "endDate": "",
+            "currentFlag": true,
+            "description": "Worked in TeleCommunication Industry, developed the frontend and backend of the application.:Used Angular & SpringBoot. Also Tools like Git, Jira, Azure Pipeline, VSCode."
+        },
+        {
             "companyName": "Tata Consultancy Services",
             "designation": "Systems Engineer",
             "startDate": "1658428200000",
-            "endDate": "",
-            "currentFlag": true,
-            "description": "Worked for Citi Group, developed the front end and middleware layer of the application.:Used HTML, CSS, JavaScript, and Angular. Also Tools like Git, Jira, BitBucket, RAD, ALM.:Secured a top 250 ranking at the TCS Top 10 Coders Competition.:I have achieved the T-factor of 4.16, which is in top 10%."
+            "endDate": "1732559400000",
+            "currentFlag": false,
+            "description": "Worked in BFSI Industry, developed the front end and middleware layer of the application.:Used HTML, CSS, JavaScript, and Angular. Also Tools like Git, Jira, BitBucket, RAD, ALM.:Secured a top 250 ranking at the TCS Top 10 Coders Competition.:I have achieved the T-factor of 4.16, which is in top 10%."
           },
         {
             "companyName": "Tata Consultancy Services",
@@ -42,7 +50,7 @@ const Experience = () => {
             "startDate": "1626892200000",
             "endDate": "1658428200000",
             "currentFlag": false,
-            "description": "Worked for Citi Group, developed the front end and middleware layer of the application.:Used HTML, CSS, JavaScript, and Angular. Also Tools like Git, Jira, BitBucket, RAD, ALM."
+            "description": "Worked in BFSI Industry, developed the front end and middleware layer of the application.:Used HTML, CSS, JavaScript, and Angular. Also Tools like Git, Jira, BitBucket, RAD, ALM."
           }
     ];
     return (
